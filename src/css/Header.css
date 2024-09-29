@@ -1,0 +1,38 @@
+header{
+    width: 100vw;
+    box-shadow: 1rem ;
+}
+.Contant{
+    border-bottom: 1px solid rgb(117, 146, 103);
+    box-shadow: 0px 0px 10px 0px rgb(43 43 43 / 34%);
+}
+.YBLogo{
+    display: flex;
+    justify-content: end;
+    padding: 7px 5px;
+}
+.YBLogo img{
+    width: 17%;
+    margin: 5px 8px;
+    max-height: 120px;
+    max-width: 313px;
+    min-width: 150px;
+}
+aside{
+    display: flex;
+    flex-direction: row-reverse;
+    /* justify-content: left; */
+    padding: 10px 7px;
+    gap: 10px;
+}
+
+aside div a {
+    margin: 0px 10px;
+    color: green;
+    text-decoration:none;
+    font-size: 0.86rem;
+}
+
+aside div a:hover{
+    color: rgb(14, 202, 45);
+}
