@@ -1,104 +1,67 @@
 import React, { useState } from 'react';
-import emailjs from 'emailjs-com';  // Import EmailJS
 import '../css/Form.css';
 
 const Form = () => {
-  const [formData, setFormData] = useState({
-    firstName: '',
-    lastName: '',
-    id: '',  // Changed from universityId to match the template
-    phoneNumber: '',
-    message: '',
-  });
+  // State to manage form fields
 
-  const handleChange = (e) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value,
-    });
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-
-    // EmailJS parameters
-    const serviceID = 'service_gpL5wej';  // Replace with your actual EmailJS Service ID
-    const templateID = 'template_zv9p2rr';  // Replace with your actual EmailJS Template ID
-    const userID = 'F60q_fWkOdt66RUxc';  // Replace with your EmailJS User ID
-
-    // Sending the email using EmailJS
-    emailjs.send(serviceID, templateID, formData, userID)
-      .then((response) => {
-        console.log('Success:', response.status, response.text);
-        alert('تم إرسال النموذج بنجاح!');
+  function Submit(e) {
+    e.preventDefault(); // Prevent default form submission behavior
+    const formEle = document.querySelector("form");
+    const formDatab = new FormData(formEle);
+    fetch(
+      "https://script.google.com/macros/s/AKfycbws5l73UKcK-RX9wOQaOzlMc2fH5Lh4Ln7gKypAHqCM7p0yWUkZaH1QlUjdkOnZoEhipw/exec",
+      {
+        method: "POST",
+        body: formDatab
+      }
+    )
+      .then((res) => res.json())
+      .then((data) => {
+        console.log(data);
       })
       .catch((error) => {
-        console.error('Error:', error);
-        alert('حدث خطأ أثناء إرسال النموذج.');
+        console.log(error);
       });
-  };
+  }
 
   return (
     <div className="form-container">
       <h2>تواصل معنا</h2>
-      <form onSubmit={handleSubmit}>
+      <form className='form' onSubmit={(e) => Submit(e)}>
         <div className="form-group">
-          <label htmlFor="firstName">الاسم الاول:</label>
-          <input
-            type="text"
-            id="firstName"
-            name="firstName"
-            value={formData.firstName}
-            onChange={handleChange}
-            required
-          />
+          <label htmlFor="FirstName">الاسم الاول:</label>
+          <input type="text" id="FirstName" name="FirstName" required />
         </div>
         <div className="form-group">
-          <label htmlFor="lastName">اسم العائلة:</label>
-          <input
-            type="text"
-            id="lastName"
-            name="lastName"
-            value={formData.lastName}
-            onChange={handleChange}
-            required
-          />
+          <label htmlFor="LastName">اسم العائلة:</label>
+          <input type="text" id="LastName" name="LastName" required />
         </div>
         <div className="form-group">
-          <label htmlFor="id">الرقم الجامعي:</label>
-          <input
-            type="text"
-            id="id"
-            name="id"  // Changed to match your EmailJS template
-            value={formData.id}
-            onChange={handleChange}
-            required
-          />
+          <label htmlFor="UniversityId">الرقم الجامعي:</label>
+          <input type="text" id="UniversityId" name="UniversityId" required />
         </div>
         <div className="form-group">
-          <label htmlFor="phoneNumber">رقم الجوال:</label>
-          <input
-            type="tel"
-            id="phoneNumber"
-            name="phoneNumber"
-            value={formData.phoneNumber}
-            onChange={handleChange}
-            required
-          />
+          <label htmlFor="PhoneNumber">رقم الجوال:</label>
+          <input type="tel" id="PhoneNumber" name="PhoneNumber" required />
         </div>
         <div className="form-group">
-          <label htmlFor="message">الرسالة:</label>
-          <textarea
-            id="message"
-            name="message"
-            rows="4"
-            value={formData.message}
-            onChange={handleChange}
-            required
-          />
+          <label htmlFor="Message">الرسالة:</label>
+          <textarea id="Message" name="Message" rows="4" required />
         </div>
-        <button className="submit-btn" type="submit">إرسال</button>
+        <button className="submit-btn" name='Name' type="submit">إرسال</button>
       </form>
+
+      {/* Modal */}
+      {/* {modalVisible && (
+        <div id="myModal" className="modal">
+          <div className="modal-content">
+            <span className="close" onClick={() => setModalVisible(false)}>
+              &times;
+            </span>
+            <p id="modalMessage">{modalMessage}</p>
+          </div>
+        </div>
+      )} */}
     </div>
   );
 };

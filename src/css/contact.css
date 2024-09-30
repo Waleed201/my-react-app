@@ -1,0 +1,65 @@
+.background-image{
+    position: relative; /* Ensure the pseudo-element is positioned relative to this element */
+    background-image: url('../assets/Photos/background.jpg');
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 40vh;
+    color: aliceblue;
+}
+
+.background-image::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 128, 0, 0.393); /* Green color with 50% opacity */
+    z-index: 1; /* Ensure the overlay is above the background image */
+}
+
+.background-image > * {
+    position: relative;
+    z-index: 2; /* Ensure the content is above the overlay */
+}
+
+.section-two{
+    display: flex;
+    flex-direction: row;
+    align-items: start;
+    justify-content: space-evenly;
+}
+
+.social-media{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 30px 5px;
+}
+
+.social-media .social-icons{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+}
+
+.social-icons .fa-brands{
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    width: 300px;
+    height: 50px;
+    margin: 10px;
+
+}
+
+.fa-brands img{
+    width: 50px;
+    aspect-ratio: 1/1;
+}
