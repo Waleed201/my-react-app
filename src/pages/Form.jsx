@@ -9,7 +9,7 @@ const Form = () => {
     const formEle = document.querySelector("form");
     const formDatab = new FormData(formEle);
     fetch(
-      "https://script.google.com/macros/s/AKfycbws5l73UKcK-RX9wOQaOzlMc2fH5Lh4Ln7gKypAHqCM7p0yWUkZaH1QlUjdkOnZoEhipw/exec",
+      "https://script.google.com/macros/s/AKfycbz8UJaX_HbExovT6KGLnKhSVqRe0FO_fo0XPDls-_FYYMBk-uh14zdaEI9lrrr4_KVFDg/exec",
       {
         method: "POST",
         body: formDatab
