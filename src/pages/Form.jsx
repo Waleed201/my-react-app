@@ -1,11 +1,12 @@
 import React, { useState } from 'react';
+import emailjs from 'emailjs-com';  // Import EmailJS
 import '../css/Form.css';
 
 const Form = () => {
   const [formData, setFormData] = useState({
     firstName: '',
     lastName: '',
-    universityId: '',
+    id: '',  // Changed from universityId to match the template
     phoneNumber: '',
     message: '',
   });
@@ -19,19 +20,16 @@ const Form = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-  
-    const scriptURL = 'https://script.google.com/macros/s/AKfycbzSl4EKb94umu60eMjElMVol4EadzF4KA_ERxzl7y4fPwtUTqkRww1i9VgJMjUEA5amiA/exec'; // Replace with your actual URL
-  
-    fetch(scriptURL, {   // Remove the comma here
-      method: 'POST',
-      body: JSON.stringify(formData),
-      headers: {
-        'Content-Type': 'application/json',
-      },
-    })
-      .then((response) => response.json())
-      .then((responseData) => {
-        console.log('Success:', responseData);
+
+    // EmailJS parameters
+    const serviceID = 'service_gpL5wej';  // Replace with your actual EmailJS Service ID
+    const templateID = 'template_zv9p2rr';  // Replace with your actual EmailJS Template ID
+    const userID = 'F60q_fWkOdt66RUxc';  // Replace with your EmailJS User ID
+
+    // Sending the email using EmailJS
+    emailjs.send(serviceID, templateID, formData, userID)
+      .then((response) => {
+        console.log('Success:', response.status, response.text);
         alert('تم إرسال النموذج بنجاح!');
       })
       .catch((error) => {
@@ -67,12 +65,12 @@ const Form = () => {
           />
         </div>
         <div className="form-group">
-          <label htmlFor="universityId">الرقم الجامعي:</label>
+          <label htmlFor="id">الرقم الجامعي:</label>
           <input
             type="text"
-            id="universityId"
-            name="universityId"
-            value={formData.universityId}
+            id="id"
+            name="id"  // Changed to match your EmailJS template
+            value={formData.id}
             onChange={handleChange}
             required
           />

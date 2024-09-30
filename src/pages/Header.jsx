@@ -15,7 +15,7 @@ function Header() {
           </div>
           <aside>
             <a href=""><div><Link to="/">الصفحة الرئيسية</Link></div></a>
-            <a href=""><div><Link to="/about">عن الكتاب السنوي</Link></div></a>
+            {/* <a href=""><div><Link to="/about">عن الكتاب السنوي</Link></div></a> */}
             <a href=""><div><Link to="/contact">تواصل معنا</Link></div></a>
             <a href=""><div><Link to="/joinus">انضم الينا</Link></div></a>
           </aside>

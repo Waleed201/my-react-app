@@ -9,7 +9,6 @@ function App() {
     <div>
       <Routes> {/* {{ edit_5 }} */}
         <Route path="/" element={<Home />} /> {/* Home page */}
-        <Route path="/about" element={<About />} /> {/* About page */}
         <Route path="/contact" element={<Contact />} /> {/* Contact page */}
         <Route path="/joinus" element={<JoinUs />} /> {/* Contact page */}
       </Routes>
