@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react"; // Ensure this is at the top
+import { Link } from 'react-router-dom';
 import Header from "./Header"; // Correct path
 import Yearbook from "../assets/Photos/YearbookImg-removebg-preview.png";
+
 
 import "../css/App.css";
 import "../css/Home.css";
@@ -32,13 +34,14 @@ function Home() {
             src={Yearbook}
             alt="YearBookPhoto"
           />
-          <div>
+          <div className="cardContant">
             <h1>لجنة الكتاب السنوي</h1>
             <p>
               هنا حيث يكتب <span>التاريخ</span>
               <br />
-              ليصبح ذكرا <span>جميلة</span>
+              ليصبح ذكرى <span>جميلة</span>
             </p>
+            <Link to="/joinus">كن جزاء من الفريق</Link>
           </div>
         </div>
         <div className="YearBookCard">

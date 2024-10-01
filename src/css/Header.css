@@ -1,6 +1,11 @@
 header{
     width: 100vw;
     box-shadow: 1rem ;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #fff;
+    z-index: 2;
 }
 .Contant{
     border-bottom: 1px solid rgb(117, 146, 103);
@@ -15,7 +20,7 @@ header{
     width: 15%;
     margin: 5px 8px;
     max-height: 120px;
-    max-width: 313px;
+    max-width: 230px;
     min-width: 150px;
 }
 aside{

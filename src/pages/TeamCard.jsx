@@ -5,10 +5,10 @@ function TeamCard({ teamName, details, imageUrl, joinLink }) {
   return (
     <div className="team-card">
       <img src={imageUrl} alt={teamName} />
-      <div>
+      <div className="cardContant">
         <h2>{teamName}</h2>
         <p>{details}</p>
-        <a href={joinLink}>الانضمام</a>
+        <div><a href={joinLink}>الانضمام</a></div>
       </div>
     </div>
   );

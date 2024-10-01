@@ -21,10 +21,14 @@
     object-fit: cover;
 }
 
-.team-card div {
+.team-card .cardContant {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
     text-align: right; 
     direction: rtl;
-    width: 57%;
+    
     margin: 16px 8px;
 }
 .team-card div h2 {
