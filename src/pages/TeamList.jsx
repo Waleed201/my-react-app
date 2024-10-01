@@ -12,19 +12,19 @@ function TeamsList() {
         {
             teamName: 'فريق المحتوى',
             details: 'يهتم فريق التحرير بشكل مباشر بمحتوى الكتاب, وكذالك توفير نسخ بالغتين العربية و الانجليزية بالإضافة إلى جمع كلمات العمداء و رئيس الجامعة و الشخصيات المعنية ',
-            imageUrl: '../src/assets/Photos/YearBookPhoto.jpg',
+            imageUrl: './src/assets/Photos/YearBookPhoto.jpg',
             joinLink: 'http://example.com/join-design'
         },
         {
             teamName: 'فريق IT',
             details: 'يهتم فريق البيانات و IT يهتم بتنسيق و ترتيب البيانات الخاصة بالخريجين و اللجنة وتسهيل لاوصول اليها بالاضافة الى ادارة موقع اللجنة الرسمي و تحسينه',
-            imageUrl: '../src/assets/Photos/ITImg.jpg',
+            imageUrl: '/src/assets/Photos/ITImg.jpg',
             joinLink: 'http://example.com/join-design'
         },
         {
             teamName: 'فريق الاعلام و التسويق ',
             details: 'يهتم فريق الإعلام والتسويق بنشر ثقافة الكتاب السنوي بالإضافة إلى إنتاج محتوى تسويقي وتعزيز التفاعل مع الجمهور ',
-            imageUrl: '../src/assets/Photos/MarktingImg.jpeg',
+            imageUrl: '/assets/Photos/MarktingImg.jpeg',
             joinLink: 'http://example.com/join-design'
         },
         // Add more teams as needed
