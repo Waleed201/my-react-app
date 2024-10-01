@@ -40,7 +40,7 @@
 }
 
 .YearBookCard h1{
-    font-size: 3rem;
+    font-size: 3.5rem;
     font-weight: 700;
     color: #01964d;
     text-align: right;
@@ -56,4 +56,43 @@
     color: #007e40; */
     font-size: larger;
     color: green;
+}
+
+@media (max-width: 650px) {
+    .home-container{
+        margin: 10px 20px;
+        gap: 20px;
+    }
+    
+    .YearBookCard{
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .YearBookCard:nth-child(even){
+        flex-direction: column;
+    }
+
+    .YearBookCard img{
+        width: 90%;
+    }
+
+    .YearBookCard .Number{
+        font-size: 14vw;
+        aspect-ratio: 371 / 266; /* Maintain a 1:1 aspect ratio */
+    
+        width: fit-content;
+        text-align: center;
+        display: flex; /* Added */
+        align-items: center; /* Added */
+        justify-content: center; /* Added */
+    }
+
+    .YearBookCard h1{
+        font-size: 2.4rem;
+
+    }
+
+
+    
 }

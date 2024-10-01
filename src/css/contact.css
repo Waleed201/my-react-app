@@ -7,7 +7,7 @@
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    height: 40vh;
+    height: 42vh;
     color: aliceblue;
 }
 
@@ -34,6 +34,10 @@
     justify-content: space-evenly;
 }
 
+.section-two > div{
+    width: 37%;
+}
+
 .social-media{
     display: flex;
     flex-direction: column;
@@ -42,7 +46,7 @@
     margin: 30px 5px;
 }
 
-.social-media .social-icons{
+.social-icons{
     display: flex;
     flex-direction: column;
     align-items: start;
@@ -51,15 +55,43 @@
 
 .social-icons .fa-brands{
     display: flex;
-    align-items: start;
-    justify-content: center;
-    width: 300px;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 34vw;
+    max-width: 280px;
     height: 50px;
     margin: 10px;
+    border: 2px solid black;
+    border-radius: 5px;
+    padding: 3px;
 
+}
+
+.fa-brands h3{
+    color: black;
 }
 
 .fa-brands img{
-    width: 50px;
+    width: 35px;
     aspect-ratio: 1/1;
 }
+
+@media (max-width: 580px) {
+  /* Your CSS rules here */
+
+  .section-two{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .section-two > div{
+    width: 74%;
+  }
+
+  .social-icons .fa-brands{
+    width: 68vw;
+  }
+  /* Add more styles as needed */
+}
+
