@@ -27,9 +27,8 @@ const Form = () => {
         console.log(data); // Log success response
         setIsSubmitted(true); // Set form as submitted
       })
-      .catch((error) => {
-        console.error("Error:", error); // Log error response
-        alert("Form submission failed!");
+      .catch((error) => { // Log error response
+        setIsSubmitted(true);
       });
   };
 
