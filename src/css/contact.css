@@ -25,7 +25,7 @@
 
 .background-image > * {
     position: relative;
-    z-index: 2; /* Ensure the content is above the overlay */
+    z-index: 1; /* Ensure the content is above the overlay */
 }
 
 .section-two{

@@ -1,8 +1,11 @@
 #root {
   margin: 0 auto;
-  margin-top: 130px;
+  /* margin-top: 130px; */
 }
 
+.wrapper {
+  margin-top: 117px;
+}
 
 .card {
   padding: 2em;

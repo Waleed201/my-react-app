@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react"; // Ensure this is at the top
 import { Link } from 'react-router-dom';
-import Header from "./Header"; // Correct path
+// import Header from "./Header"; // Correct path
 import Yearbook from "../assets/Photos/YearbookImg-removebg-preview.png";
 
 
@@ -27,7 +27,6 @@ function Home() {
   
   return (
     <>
-      <Header />
       <div className="home-container">
       <div className="YearBookCard">
           <img

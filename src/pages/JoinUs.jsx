@@ -1,5 +1,5 @@
 import React from 'react';
-import Header from "./Header"; // Correct path
+// import Header from "./Header"; // Correct path
 import TeamsList from './TeamList';
 import '../css/App.css'
 import '../css/JoinUs.css'
@@ -9,7 +9,6 @@ function JoinUs() {
 
   return (
     <>
-    <Header/>
     <TeamsList />
     </>
   )

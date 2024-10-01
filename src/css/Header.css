@@ -4,7 +4,7 @@ header{
     position: fixed;
     top: 0;
     left: 0;
-    background-color: #fff;
+    background-color: #ffffffed;
     z-index: 2;
 }
 .Contant{
@@ -20,7 +20,7 @@ header{
     width: 15%;
     margin: 5px 8px;
     max-height: 120px;
-    max-width: 230px;
+    max-width: 200px;
     min-width: 150px;
 }
 aside{
@@ -31,13 +31,13 @@ aside{
     gap: 10px;
 }
 
-aside div a {
+aside a {
     margin: 0px 10px;
     color: green;
     text-decoration:none;
     font-size: 0.86rem;
 }
 
-aside div a:hover{
+aside a:hover{
     color: rgb(14, 202, 45);
 }
