@@ -61,6 +61,7 @@ const Form = () => {
         </form>
       ) : ( // Show the success message once the form is submitted
         <div className="success-message">
+          <img src="assets/photos/rightIcon.png" alt="" />
           <h2>تم إرسال الرسالة بنجاح!</h2>
           <p>شكرًا لتواصلك معنا. سوف نرد في أقرب وقت ممكن.</p>
         </div>
