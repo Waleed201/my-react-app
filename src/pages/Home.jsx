@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react"; // Ensure this is at the top
 import Header from "./Header"; // Correct path
-import TeamsList from "./TeamList";
+import Yearbook from "../assets/Photos/YearbookImg-removebg-preview.png";
+
 import "../css/App.css";
 import "../css/Home.css";
 
@@ -28,7 +29,7 @@ function Home() {
       <div className="home-container">
       <div className="YearBookCard">
           <img
-            src="/src/assets/Photos/YearbookImg-removebg-preview.png"
+            src={Yearbook}
             alt="YearBookPhoto"
           />
           <div>
