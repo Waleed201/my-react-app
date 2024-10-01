@@ -1,6 +1,5 @@
 import { Routes, Route } from 'react-router-dom'; // {{ edit_1 }}
 import Home from './pages/Home'; // {{ edit_2 }}
-import About from './pages/About'; // {{ edit_3 }}
 import Contact from './pages/Contact'; // {{ edit_4 }}
 import JoinUs from './pages/JoinUs'; // {{ edit_4 }}
 
