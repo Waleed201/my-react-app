@@ -17,12 +17,17 @@ header{
     padding: 7px 5px;
 }
 .YBLogo img{
-    width: 15%;
     margin: 5px 8px;
-    max-height: 120px;
-    max-width: 200px;
-    min-width: 150px;
+    width: 170px;
 }
+
+@media (max-width: 1120px){
+    .YBLogo img{
+        width: 150px;
+    }
+    
+}
+
 aside{
     display: flex;
     flex-direction: row-reverse;

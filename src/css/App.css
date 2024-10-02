@@ -3,9 +3,17 @@
   /* margin-top: 130px; */
 }
 
-.wrapper {
-  /* margin-top: 117px; */
+.Wrapper {
+  margin-top: 120px;
 }
+
+@media (max-width: 1120px){
+  .Wrapper{
+    margin-top: 114px;
+  }
+  
+}
+
 
 .card {
   padding: 2em;
