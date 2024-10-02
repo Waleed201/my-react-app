@@ -1,5 +1,5 @@
 import React from "react";
-// import Header from "./Header"; // Correct path
+import Header from "./Header"; // Correct path
 import Form from "./Form";
 import xIcon from "../assets/Photos/x-social-media-black-icon.png";
 import linkedinIcon from "../assets/Photos/linkedin.png";

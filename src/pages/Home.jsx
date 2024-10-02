@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react"; // Ensure this is at the top
 import { Link } from 'react-router-dom';
 // import Header from "./Header"; // Correct path
-import Yearbook from "../assets/Photos/YearbookImg-removebg-preview.png";
+import Yearbook from "../assets/Photos/YearbookImg.png";
 
 
 import "../css/App.css";

@@ -24,12 +24,12 @@
 .team-card .cardContant {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
     align-items: start;
     text-align: right; 
     direction: rtl;
     
-    margin: 16px 8px;
+    margin: 8px 8px;
 }
 .team-card div h2 {
     font-size: 1.5rem;

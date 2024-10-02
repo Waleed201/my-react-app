@@ -19,8 +19,12 @@ function App() {
 
   useEffect(() => {
     // Adjust margin on initial load
-    adjustBodyMargin();
-
+    const timer = setTimeout(() => {
+      adjustBodyMargin();
+    }, 10); // Adjust the delay as necessary
+  
+    return () => clearTimeout(timer);
+  
     // Adjust margin when window is resized or orientation changes
     window.addEventListener("resize", adjustBodyMargin);
     window.addEventListener("orientationchange", adjustBodyMargin);
@@ -41,7 +45,7 @@ function App() {
 
   return (
     <div>
-      <Header id="header" /> {/* Add id to Header component */}
+      <Header /> {/* Add id to Header component */}
       <div className="Wrapper" style={{ marginTop: `${headerHeight}px` }}> 
         <Routes>
           <Route path="/" element={<Home />} /> 
