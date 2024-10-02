@@ -21,7 +21,7 @@ function App() {
     // Adjust margin on initial load
     const timer = setTimeout(() => {
       adjustBodyMargin();
-    }, 30); // Adjust the delay as necessary
+    }, 100); // Adjust the delay as necessary
   
     return () => clearTimeout(timer);
   
