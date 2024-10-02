@@ -10,6 +10,7 @@ const Form = () => {
     const formEle = document.querySelector("form");
     const formDatab = new FormData(formEle);
 
+    // easy in shallah
     fetch(
       "https://script.google.com/macros/s/AKfycbz8UJaX_HbExovT6KGLnKhSVqRe0FO_fo0XPDls-_FYYMBk-uh14zdaEI9lrrr4_KVFDg/exec", // Replace with your correct Google Apps Script URL
       {
