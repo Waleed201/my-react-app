@@ -3,14 +3,17 @@ import '../css/Form.css';
 
 const Form = () => {
   const [isSubmitted, setIsSubmitted] = useState(false); // State to track form submission
+  const [isLoading, setIsLoading] = useState(false); // State to track loading status
 
   // Submit function
   const Submit = (e) => {
     e.preventDefault(); // Prevent default form submission
     const formEle = document.querySelector("form");
     const formDatab = new FormData(formEle);
+    
+    setIsLoading(true); // Set loading to true when submission starts
+    setIsSubmitted(true);
 
-    // easy in shallah
     fetch(
       "https://script.google.com/macros/s/AKfycbz8UJaX_HbExovT6KGLnKhSVqRe0FO_fo0XPDls-_FYYMBk-uh14zdaEI9lrrr4_KVFDg/exec", // Replace with your correct Google Apps Script URL
       {
@@ -30,6 +33,9 @@ const Form = () => {
       })
       .catch((error) => { // Log error response
         setIsSubmitted(true);
+      })
+      .finally(() => {
+        setIsLoading(false); // Reset loading state after completion
       });
   };
 
@@ -48,7 +54,7 @@ const Form = () => {
           </div>
           <div className="form-group">
             <label htmlFor="UniversityId">الرقم الجامعي:</label>
-            <input type="text" id="UniversityId" name="UniversityId" required />
+            <input type="tel" id="UniversityId" name="UniversityId" required />
           </div>
           <div className="form-group">
             <label htmlFor="PhoneNumber">رقم الجوال:</label>
@@ -62,10 +68,16 @@ const Form = () => {
         </form>
       ) : ( // Show the success message once the form is submitted
         <div className="success-message">
-          <img src="assets/photos/rightIcon.png" alt="" />
-          <h2>تم إرسال الرسالة بنجاح!</h2>
-          <p>شكرًا لتواصلك معنا. سوف نرد في أقرب وقت ممكن.</p>
-        </div>
+          <img 
+          src={isLoading ? "assets/photos/load.gif" : "assets/photos/rightIcon.png"} 
+          alt="" />
+          <h2>
+          {isLoading ? 'جاري الإرسال' : ' تم إرسال الرسالة بنجاح!'} 
+            </h2>
+          <p>
+          {isLoading ? '...' : ' شكرًا لتواصلك معنا. سوف نرد في أقرب وقت ممكن.'} 
+            </p>
+        </div>  
       )}
     </div>
   );

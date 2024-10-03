@@ -70,7 +70,8 @@ h2 {
 
 .success-message img {
     height: 50px;
-    width: 50px;
+    /* width: 50px;
+    object-fit: cover; */
 }
 
 @media (max-width: 768px) {
