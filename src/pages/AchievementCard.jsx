@@ -26,7 +26,7 @@ const AchievementCard = ({ title, imageClass, achievementNumbers }) => {
             <div key={index} className="AchievementNumber w-100 num-counter">
               <div className="count-value-container"> {/* New div to wrap count value and unit */}
                 <span className="h1 count-value font-background">{achievement.value}</span>
-                <span className="h1">+</span>
+                <span className="h1"></span>
               </div>
               <div>
                 <small>{achievement.label}</small>
