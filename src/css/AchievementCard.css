@@ -1,0 +1,120 @@
+
+.achievement-list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+
+.custom-shadow {
+    -webkit-box-shadow: 0 0 68px 0 rgba(174,175,175,.17);
+    box-shadow: 0 0 68px 0 rgba(174,175,175,.17)!important;
+}
+
+.icon-element {
+    /* Add styles for the icon element, e.g., size, margin */
+    color: #000!important
+
+}
+
+.achievement-card{
+    padding: 1.4rem;
+    border-radius: 0.5rem;
+    margin-bottom:20px ;
+    background: linear-gradient(-45deg, #60ef56, #007e40);  /*14f0c4.  0fdeb5. ,, 52df47 */
+    background-size: 400% 400%;
+    -webkit-background-clip: text;
+
+}
+
+.card-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+i {
+    font-size: 2.5rem;
+    color: #01964d;
+}
+
+.Achievements {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 90%;
+}
+
+.AchievementNumber {
+    /* Add styles for achievement number layout */
+    /* flex: 1;  */
+    /* text-align: center;  */
+
+    border-right: 1px solid #d0d0d0;
+    width: -webkit-fill-available;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.AchievementNumber:last-child {
+    border-right: 0px solid #d0d0d0
+
+}
+
+.h1{
+    font-size: 1.5rem;
+
+}
+
+.count-value {
+    /* font-size: 2rem; 
+    color: #333;  */
+    /* color: #54c942; */
+    font-size: 2rem;
+    /* font-size: 48px; */
+    line-height: 1;
+    font-weight: 700;
+}
+
+.font-background {
+    /* background: linear-gradient(-45deg, #52df47, #ea8818, #0fdeb5);  14f0c4.  0fdeb5. ,, 52df47 */
+    /* background-size: 400% 400%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; */
+    -webkit-text-fill-color: transparent;
+
+}
+
+@keyframes gradientAnimation {
+	0% {
+		background-position: 0% 100%;
+    
+	}
+	50% {
+		background-position: 100% 100%;
+    
+	}
+	100% {
+		background-position: 0% 100%;
+    
+	}
+}
+
+.achievement-card:hover{
+    animation: gradientAnimation 5s infinite; /* Animation duration and infinite loop */
+
+}
+
+
+
+.StatisticsLabel {
+    color: #71c79c;
+    font-family: "Bukra Bold"!important;
+    font-size: 22px;
+    margin: 0
+}

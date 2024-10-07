@@ -19,6 +19,7 @@
     border-top-right-radius: 0px;
     border-bottom-right-radius: 0px;
     object-fit: cover;
+    aspect-ratio: 3/2;
 }
 
 .team-card .cardContant {
@@ -28,17 +29,18 @@
     align-items: start;
     text-align: right; 
     direction: rtl;
+    gap: 10px;
     
     margin: 8px 8px;
 }
 .team-card div h2 {
     font-size: 1.5rem;
-    margin: 16px 0 8px;
+    margin: 0;
 }
 
 .team-card div p {
     font-size: 1rem;
-    margin-bottom: 16px;
+    margin:0;
     color: #7d7d7d;
 }
 
@@ -77,18 +79,18 @@
         border-bottom-right-radius: 0px;
     }
     
-    .team-card div {
+    .team-card .cardContant {
         width:auto ;
         margin: 4px 8px;
         padding: 5px;
     }
 
-    .team-card div h2 {
+    .team-card .cardContant h2 {
         font-size: 1.3rem;
         margin: 8px 0 4px;
     }
     
-    .team-card div p {
+    .team-card .cardContant p {
         font-size: 0.85rem;
         margin-bottom: 10px;
     }

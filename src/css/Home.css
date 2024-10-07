@@ -76,6 +76,14 @@
 
 }
 
+.hst {
+    width: 100%;
+}
+
+.hst h2{
+    font-size: 2rem;
+}
+
 @media (max-width: 850px) {
     .home-container{
         margin: 10px 20px;

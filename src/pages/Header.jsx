@@ -4,10 +4,6 @@ import YearBookLogo from "../assets/Photos/YB_LogoText_Green.png";
 import "../css/Header.css";
 
 function Header() {
-
-
-  
-
   return (
     <>
       <header id="header">
@@ -16,9 +12,9 @@ function Header() {
             <img src={YearBookLogo} alt="Year Book Logo" />
           </div>
           <aside>
-          <Link to="/">الصفحة الرئيسية</Link>
-          <Link to="/joinus">انضم الينا</Link>
-          <Link to="/contact">تواصل معنا</Link>
+            <Link to="/">الصفحة الرئيسية</Link>
+            <Link to="/joinus">انضم الينا</Link>
+            <Link to="/contact">تواصل معنا</Link>
           </aside>
         </div>
       </header>

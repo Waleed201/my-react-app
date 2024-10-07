@@ -34,6 +34,7 @@ aside{
     /* justify-content: left; */
     padding: 10px 7px;
     gap: 10px;
+    align-items: baseline;
 }
 
 aside a {
