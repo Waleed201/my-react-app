@@ -15,6 +15,7 @@ const AchievementList = () => {
         const formattedData = rows.slice(1).map(row => {
           const title = row[0]; // title from column A
           const achievementNumbers = [];
+          const imageClass = row[5]
 
           // Check for value and label in columns B and C
           if (row[1] && row[2]) {
@@ -25,7 +26,8 @@ const AchievementList = () => {
             achievementNumbers.push({ value: row[3], label: row[4] });
           }
 
-          return { title, imageClass: 'bi bi-mortarboard', achievementNumbers };
+
+          return { title, imageClass, achievementNumbers };
         });
 
         setAchievements(formattedData);
